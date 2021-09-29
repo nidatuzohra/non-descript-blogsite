@@ -1,0 +1,10 @@
+<!--This template is used to view all posts-->
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <img id="blogImage" src="/images/<%= blog.image %>" alt="<%= blog.title %>">
+    <h3 id="blogHeading"><%= blog.title %></h3>
+    <section id="blogContent"><%- blog.content %></section>
+</body>
+<%- include('layouts/footer'); -%>

@@ -1,0 +1,28 @@
+<!--This page displays all posts from the database-->
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+<body>
+  <%- include('layouts/adminpanel'); -%>
+  <section>
+    <table id="archiveTable">
+        <thead>
+            <tr>
+                 <th>Name</th>
+                 <th>Delete</th>   
+                 <th>Edit</th>          
+             </tr>
+        </thead>
+        <tbody>
+             <% for(var post of posts){ %>
+                <tr>
+                    <td><%= post.title %></td>
+                    <td><a href="/delete/<%= post._id %>">Delete</a></td>
+                    <td><a href="/edit/<%= post._id %>">Edit</a></td>
+                </tr>
+             <% } %>
+        </tbody>
+    </table>
+    </section>
+</body>
+<%- include('layouts/footer'); -%>
+

@@ -1,0 +1,48 @@
+<!--This page allows the user to edit a specific blog post-->
+<% 
+    var titleError = '';
+    var slugError = '';
+
+    if(typeof(errors) != 'undefined')
+    {
+        for(var error of errors)
+        {
+            switch(error.param)
+            {
+                case 'pageTitle': pageTitle = error.value;
+                titleError = error.msg;
+                break;
+                case 'postslug': postslug = error.value;
+                slugError = error.msg;
+                break;
+            }
+        }
+    }
+%>
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+
+<body>
+    <%- include('layouts/adminpanel'); -%>
+    <form class="pageEditor" method="POST" action="" enctype="multipart/form-data">
+        <img id="editImage" src="/images/<%= draft.image %>" height="100">
+        <br>
+        <label>Page Title</label>
+        <input name="pageTitle" id="pageTitle" type="text" value="<%= draft.title %>">
+        <p><%= titleError %></p>
+
+        <label>Hero Image</label>
+        <input type="file" id="heroImage" name="heroImage">
+
+        <textarea name="content" id="content">
+            <%= draft.content %>
+        </textarea><br>
+
+        <label>Slug</label>
+        <input name="postslug" id="postslug" type="text" value="<%= draft.slug %>">
+        <p><%= slugError %></p>
+
+        <input type="submit" value="Publish">
+    </form>
+</body>
+<%- include('layouts/footer'); -%>

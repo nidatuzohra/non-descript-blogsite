@@ -1,0 +1,10 @@
+<!--This page is displayed when the user logs in succesfully-->
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+<body>
+  <%- include('layouts/adminpanel'); -%>
+    <main>
+        <h3>Welcome, <%= credentials.username %>!</h3>
+    </main>
+</body>
+<%- include('layouts/footer'); -%>

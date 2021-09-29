@@ -1,0 +1,175 @@
+body{
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Exo';
+}
+
+header{
+    width: 30%;
+    margin: 0 auto;
+}
+
+header a{
+    text-decoration: none;
+    color: #6D6875;
+    text-align: center;
+}
+
+header img{
+    float: left;
+}
+
+.nav_menu{
+    width: 100%;
+    display: flexbox;
+    margin: 0 auto;
+}
+
+.nav_menu ul{
+    clear: both;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav_menu ul li{
+    padding: 0.5em 0; 
+    display: inline-block;
+    background-color: #FFCDB2;
+}
+
+.nav_menu a{
+    color: #B5838D;;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+.nav_menu a:hover, a:focus{
+    color:#C0D6DF;
+    font-weight: bold;
+}
+
+.mainContent, main, .msgDisplay{
+    clear: both;
+    margin: 10% auto;
+    text-align: center;
+    min-height: 100px;
+    width: 70%;
+}
+
+main h2 a{
+    color: white;
+    background-color: darkgoldenrod;
+    border-radius: 5px;
+    box-shadow: 5px 5px #888888;
+    text-decoration: none;
+}
+
+h3{
+    clear: both;
+    color: #E5989B;
+    font-weight: bold;
+    font-size: 120%;
+    padding-top: 2em;
+    text-align: center;
+}
+
+#loginForm{
+    padding: 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loginForm label{
+    color: #E5989B;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+#loginForm input{
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+footer p{
+    color: #B5838D;
+    font-size: 70%;
+    text-align: center;
+}
+
+.msgDisplay{
+    clear: both;
+    color: #B5838D;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.errorMsgs{
+    clear: both;
+    color: red;
+    font-family: 'Roboto';
+    font-size: 70%;
+    text-align: center;
+}
+
+.pageEditor{
+    width: 80%;
+    margin: 2em auto;
+}
+
+.pageEditor label{
+    font-weight: bold;
+}
+
+.pageEditor input{
+    padding: 1em 0;
+    width: 50%;
+}
+
+#blogImage, #editImage{
+    border: 5px solid black;
+    border-radius: 2px;
+    display: block;
+    margin: 2em auto;
+    width: 75%;
+}
+
+#blogHeading{
+    margin: 0;
+    padding: 0;
+}
+
+#blogContent{
+    width: 75%;
+    margin: 1em auto;
+    font-family: 'Roboto';
+}
+
+#archiveTable{
+    margin: 3em auto;
+    border: 2px solid #FFCDB2;
+}
+
+#archiveTable th{
+    text-align: left;
+    padding: 1em 0.5em;
+    border-bottom: 2px solid #6D6875;
+}
+
+#archiveTable td{
+    padding: 0.5em;
+}
+
+#archiveTable thead tr th:first-child{
+    width: 300px;
+}
+
+.addPostError{
+    clear: both;
+    color: red;
+    font-family: 'Roboto';
+    font-size: 70%;
+}

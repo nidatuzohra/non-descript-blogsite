@@ -1,0 +1,8 @@
+<!--This file is used to display messages when the user is not logged in-->
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+<body>
+  <%- include('layouts/nav', { posts : posts}); -%>
+    <p class="msgDisplay"><%= msg %></p>
+</body>
+<%- include('layouts/footer'); -%>

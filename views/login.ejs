@@ -1,0 +1,28 @@
+<!--This page allows the user to log in-->
+<%- include('layouts/head') -%>
+<%- include('layouts/header'); -%>
+<body>
+  <%- include('layouts/nav', { posts : posts }); -%>
+    <h3>Login</h3>
+    <form id="loginForm" method="POST" action="process">
+      <label>Username</label><br>
+      <input name="username" id="username" type="text" value="<%= credentials.username %>"><br>
+      <label>Password</label><br>
+      <input name="password" id="password" type="password"><br>
+
+      <input type="submit" value="Login">
+    </form>
+    <% if (typeof(message) != 'undefined') { %>
+      <p class="errorMsgs">
+        Errors: <br>
+        <% if (typeof(message) == 'string') { %>
+          <%= message %>
+        <% } else { %>
+          <% for(var error of message) { %>
+            <%= error.msg %> <br>
+          <% } %>
+        <% } %>
+    </p>
+    <% } %>
+</body>
+<%- include('layouts/footer'); -%>
